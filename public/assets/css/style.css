@@ -50,9 +50,9 @@ nav a {
 }
 
 .hero {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 60px 40px;
+    padding: 80px 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -86,14 +86,7 @@ nav a {
     gap: 20px;
 }
 
-.btn-outline {
-    border: 1px solid #d1d5db;
-    padding: 10px 20px;
-    border-radius: 8px;
-    background-color: #fff;
-    cursor: pointer;
-    font-weight: bold;
-}
+
 
 .hero-image {
     flex: 1;
@@ -121,8 +114,8 @@ nav a {
 
 .why-choose-us {
     max-width: 1200px;
-    margin: 60px auto 20px auto;
-    padding: 0 40px;
+    margin: 20px auto;
+    padding: 0px 20px;
     text-align: center;
 }
 
@@ -140,7 +133,7 @@ nav a {
 .features {
     max-width: 1200px;
     margin: 60px auto;
-    padding: 0 40px;
+    padding: 0px 40px;
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -181,9 +174,9 @@ nav a {
 }
 
 .services {
-    max-width: 1200px;
+    background-color: #ceebff;
     margin: 60px auto;
-    padding: 0 40px;
+    padding: 60px 40px;
     text-align: center;
 }
 
@@ -212,6 +205,7 @@ nav a {
 .service-item img {
     width: 80px;
     height: 80px;
+    border-radius: 50%;
     margin-bottom: 20px;
 }
 
