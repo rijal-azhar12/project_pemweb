@@ -16,7 +16,7 @@
         
         <ul class="nav-links">
             <li><a href="<?= base_url('beranda') ?>" <?= (uri_string() == 'beranda' || uri_string() == '') ? 'class="active"' : '' ?>>Beranda</a></li>
-            <li><a href="<?= base_url('tentang') ?>" <?= uri_string() == 'tentang' ? 'class="active"' : '' ?>>Tentang Kami</a></li>
+            <li><a href="<?= base_url('about') ?>" <?= uri_string() == 'about' ? 'class="active"' : '' ?>>Tentang Kami</a></li>
             <li><a href="<?= base_url('layanan') ?>" <?= uri_string() == 'layanan' ? 'class="active"' : '' ?>>Layanan</a></li>
             <li><a href="<?= base_url('galeri') ?>" <?= uri_string() == 'galeri' ? 'class="active"' : '' ?>>Testimoni & Galeri</a></li>
             <li><a href="<?= base_url('kontak') ?>" <?= uri_string() == 'kontak' ? 'class="active"' : '' ?>>Kontak</a></li>

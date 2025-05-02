@@ -712,3 +712,435 @@ body {
         max-width: 250px;
     }
 }
+
+/* HALAMAN ABOUT */
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f9fafb;
+    color: #111827;
+    line-height: 1.6;
+}
+
+/* navbar */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1f2937;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #3b82f6;
+}
+
+/* header tentang kami */
+.about-header {
+    position: relative;
+    height: 400px;
+    background-image: url('/assets/images/bromo.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.header-content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-content p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* section sejarah perusahaan */
+.history-section {
+    padding: 80px 0;
+    background-color: #f8fafc;
+}
+
+.history-card {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.history-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.card-image {
+    flex: 1;
+    min-height: 300px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-content h3 {
+    font-size: 1.8rem;
+    color: #3b82f6;
+    margin-bottom: 20px;
+}
+
+.card-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4b5563;
+    margin-bottom: 25px;
+}
+
+/* Profil Perusahaan */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* visi misi */
+.vision-mission-section {
+    padding: 60px 0;
+    background-color: #f8fafc;
+}
+
+.vm-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.vm-main-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.vm-main-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #1e293b;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.vm-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.vm-card {
+    flex: 1;
+    background: #f9fafb;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.vm-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.vm-icon {
+    font-size: 32px;
+    color: #3b82f6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.vm-card h3 {
+    color: #3b82f6;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.vm-card p {
+    text-align: center;
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+.vm-card ul {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.vm-card li {
+    margin-bottom: 12px;
+    color: #4b5563;
+    line-height: 1.7;
+    position: relative;
+    padding-left: 30px;
+}
+
+.vm-card li:before {
+    content: "•";
+    color: #3b82f6;
+    font-size: 24px;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* Armada */
+.fleet-section {
+    padding: 60px 0;
+    background-color: #f8fafc;
+}
+
+.fleet-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fleet-main-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.fleet-main-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #1e293b;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.fleet-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.fleet-image {
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.fleet-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.fleet-details {
+    flex: 1;
+}
+
+.fleet-details h3 {
+    font-size: 1.8rem;
+    color: #3b82f6;
+    margin-bottom: 20px;
+}
+
+.fleet-details p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4b5563;
+    margin-bottom: 30px;
+}
+
+/* Achievement Grid dalam Card */
+.fleet-details .achievement-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.fleet-details .achievement-item {
+    flex: 1;
+    min-width: 150px;
+    padding: 20px;
+    margin-bottom: 0;
+}
+
+.achievement-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.achievement-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    min-width: 250px;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.achievement-item:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-icon {
+    font-size: 36px;
+    color: #3b82f6;
+    margin-bottom: 15px;
+}
+
+.achievement-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #3b82f6;
+    margin-bottom: 5px;
+}
+
+.achievement-label {
+    font-size: 16px;
+    color: #6b7280;
+}
+
+/* Footer */
+.quick-contact {
+    background-color: #e0f2fe;
+    color: #0c4a6e;
+    padding: 50px 40px;
+    text-align: left;
+}
+
+.quick-contact h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.quick-contact ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.quick-contact li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.quick-contact i {
+    color: #0284c7;
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .fleet-content {
+        flex-direction: column;
+    }
+
+    .fleet-image {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fleet-main-card {
+        padding: 30px 20px;
+    }
+
+    .fleet-main-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .fleet-details .achievement-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .fleet-details .achievement-item {
+        width: 100%;
+    }
+}

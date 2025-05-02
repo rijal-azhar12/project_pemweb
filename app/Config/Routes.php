@@ -7,4 +7,5 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Beranda::index');
 $routes->get('beranda', 'Beranda::index');
+$routes->get('about', 'about::index');
 $routes->get('layanan', 'Layanan::index');
