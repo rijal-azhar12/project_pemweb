@@ -5,7 +5,7 @@
   .contact-header {
     position: relative;
     height: 400px;
-    background: url('picture/call center.jpeg') center/cover no-repeat;
+    background: url('assets/images/call center.jpeg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
