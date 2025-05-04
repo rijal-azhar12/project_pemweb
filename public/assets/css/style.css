@@ -142,6 +142,7 @@ body {
     border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
+    text-decoration: none;
 }
 
 /* Hover Effect */
@@ -149,6 +150,7 @@ body {
     background-color: #2563eb;
     transform: translateY(-2px);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
 }
 
 /* Active State */
@@ -193,6 +195,10 @@ body {
     gap: 20px;
 }
 
+.hero-buttons a {
+    text-decoration: none;
+    display: inline-block; 
+}
 
 
 .hero-image {
@@ -279,15 +285,15 @@ body {
 }
 
     .hero-buttons {
-        flex-direction: column; /* Stack vertically on mobile */
+        flex-direction: column; 
         gap: 15px;
         width: 100%;
     }
 
     .btn-primary {
-        width: 100%; /* Full width on mobile */
-        padding: 14px 0; /* Taller for touch */
-        font-size: 18px; /* Larger text */
+        width: 100%; 
+        padding: 14px 0; 
+        font-size: 18px; 
     }
 }
 
@@ -429,9 +435,9 @@ body {
     color: #3b82f6;
 }
 
+/* Gaya dasar quick-contact (tetap sama) */
 .quick-contact {
     background-color: #e0f2fe;
-    /* light blue */
     color: #0c4a6e;
     padding: 40px;
     text-align: left;
@@ -443,23 +449,43 @@ body {
     color: #0c4a6e;
 }
 
-.quick-contact ul {
+/* Gaya untuk contact links */
+.contact-links {
     list-style: none;
     padding: 0;
     margin: 20px 0;
 }
 
-.quick-contact li {
+.contact-links li {
     margin-bottom: 10px;
     font-size: 16px;
+}
+
+.contact-links a {
+    color: #0c4a6e;
+    text-decoration: none;
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: color 0.3s ease;
 }
 
-.quick-contact i {
+/* Mengatur semua state link agar warnanya konsisten */
+.contact-links a:link,
+.contact-links a:visited,
+.contact-links a:active {
+    color: #0c4a6e;
+}
+
+.contact-links a:hover {
+    color: #0284c7;
+}
+
+.contact-links i {
     color: #0284c7;
     font-size: 18px;
+    width: 20px; 
+    text-align: center;
 }
 
 /* Layanan Page Styles */
@@ -631,6 +657,7 @@ body {
 .destination-desc p {
     font-size: 14px;
     margin-bottom: 15px;
+    
 }
 
 .btn-outline {
@@ -641,6 +668,7 @@ body {
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .btn-outline:hover {
@@ -687,6 +715,7 @@ body {
     cursor: pointer;
     font-weight: bold;
     transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .btn-secondary:hover {
@@ -1067,11 +1096,12 @@ body {
 .contact-header {
     position: relative;
     height: 400px;
-    background: url('picture/call center.jpeg') center/cover no-repeat;
+    background: url('/assets/images/kontak/call center.jpeg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .dark-overlay {
     position: absolute;
     top: 0; left: 0;

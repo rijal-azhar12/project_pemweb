@@ -30,21 +30,19 @@
     </nav>
     <?= $this->renderSection('content') ?>
     <footer>
-    <section class="quick-contact">
-        <h3>Contact Info</h3>
-        <p>Jl. Jend. Sudirman, Tambakrejo, Plandi, Kec. Wonosari, Kabupaten Malang, Jawa Timur 65164</p>
-        <ul>
-            <li><i class="fas fa-phone-alt"></i> +6281 266 691 786</li>
-            <li><i class="fas fa-envelope"></i> cvhsjayaabadi77@gmail.com</li>
-        </ul>
-    </section>
+        <section class="quick-contact">
+            <h3>Contact Info</h3>
+            <p>Jl. Jend. Sudirman, Tambakrejo, Plandi, Kec. Wonosari, Kabupaten Malang, Jawa Timur 65164</p>
+            <ul class="contact-links">
+                <li><a href="tel:+6281266691786"><i class="fas fa-phone-alt"></i> +6281 266 691 786</a></li>
+                <li><a href="https://wa.me/6281266691786" target="_blank"><i class="fa-brands fa-square-whatsapp"></i> +6281 266 691 786</a></li>
+                <li><a href="mailto:cvhsjayaabadi77@gmail.com"><i class="fas fa-envelope"></i> cvhsjayaabadi77@gmail.com</a></li>
+            </ul>
+        </section>
+    </footer>
 
-
-
-</footer>
-
-<script src="<?= base_url('assets/js/script.js') ?>"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url('assets/js/script.js') ?>"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

@@ -26,9 +26,9 @@
                     dan terjangkau ke berbagai destinasi di indonesia.
                 </p>
                 <div class="hero-buttons">
-                <button class="btn-primary">Pesan Sekarang</button>
+                    <a href="<?= base_url('/kontak') ?>" class="btn-primary" style="text-decoration: none;">Pesan Sekarang</a>
+                </div>
             </div>
-        </div>
         <div class="hero-image">
         <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">

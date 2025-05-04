@@ -1,6 +1,28 @@
 <?= $this->extend('layouts/main') ?>
 <?= $this->section('content') ?>
 
+<?php
+// WhatsApp helper function
+function whatsapp_link($service, $destination = '') {
+    $number = "6281266691786"; // Your WhatsApp number
+    
+    $templates = [
+        'antar-jemput' => "Halo CV HS Jaya Abadi,\nSaya ingin memesan layanan Antar Jemput Antar Kota dengan detail:\n\n• Jenis Kendaraan: \n• Tanggal: \n• Jam Penjemputan: \n• Lokasi Penjemputan: \n• Tujuan: \n• Jumlah Penumpang: ",
+        
+        'liburan' => "Halo CV HS Jaya Abadi,\nSaya ingin memesan layanan Pengantaran Liburan dengan detail:\n\n• Destinasi: ".($destination ?: '')."\n• Tanggal Berangkat: \n• Tanggal Pulang: \n• Jumlah Orang: \n• Jenis Kendaraan: \n• Butuh Tour Guide: (Ya/Tidak)",
+        
+        'sewa-mobil' => "Halo CV HS Jaya Abadi,\nSaya ingin menyewa mobil + sopir dengan detail:\n\n• Jenis Mobil: \n• Durasi Sewa: \n• Tanggal Mulai: \n• Lokasi Penjemputan: \n• Tujuan: \n• Kebutuhan Khusus: ",
+        
+        'destinasi' => "Halo CV HS Jaya Abadi,\nSaya ingin pesan transportasi ke $destination dengan detail:\n\n• Tanggal Kunjungan: \n• Jumlah Orang: \n• Jenis Kendaraan: \n• Butuh Tour Guide: (Ya/Tidak)\n• Catatan Tambahan: ",
+        
+        'general' => "Halo CV HS Jaya Abadi,\nSaya ingin bertanya tentang layanan Anda.\n\nKebutuhan saya: "
+    ];
+    
+    $message = $templates[$service] ?? $templates['general'];
+    return "https://wa.me/$number?text=".rawurlencode($message);
+}
+?>
+
     <section class="services-hero">
         <div class="container">
             <div class="services-hero-content">
@@ -29,7 +51,7 @@
                     <li>Sopir berpengalaman yang mengenal rute dengan baik</li>
                     <li>Fleksibel dalam penentuan titik jemput dan tujuan</li>
                 </ul>
-                <button class="btn-primary">Pesan Sekarang</button>
+                <a href="<?= whatsapp_link('antar-jemput') ?>" class="btn-primary" target="_blank">Pesan Sekarang</a>
             </div>
 
             <div class="service-card">
@@ -40,10 +62,10 @@
                 <ul>
                     <li>Melayani perjalanan wisata di seluruh Pulau Jawa</li>
                     <li>Bisa termasuk paket tour dengan itinerary</li>
-                    <li>Kendaraan nyaman untuk keluarga atau grup</li>
+                    <li>Kendaraan nyaman untuk keluarga atau grup sesuai dengan kebutuhan</li>
                     <li>Optional dengan tour guide lokal</li>
                 </ul>
-                <button class="btn-primary">Pesan Sekarang</button>
+                <a href="<?= whatsapp_link('liburan') ?>" class="btn-primary" target="_blank">Pesan Sekarang</a>
             </div>
 
             <div class="service-card">
@@ -57,7 +79,7 @@
                     <li>Pilihan Jenis kendaraan mulai dari Bus hingga Mobil</li>
                     <li>Sopir terjamin keprofesionalanannya dan ramah</li>
                 </ul>
-                <button class="btn-primary">Pesan Sekarang</button>
+                <a href="<?= whatsapp_link('sewa-mobil') ?>" class="btn-primary" target="_blank">Pesan Sekarang</a>
             </div>
         </div>
     </section>
@@ -76,7 +98,7 @@
                     <p>Malang, Jawa Timur</p>
                     <div class="destination-desc">
                         <p>Nikmati keindahan sunrise di atas awan dan pemandangan kawah Bromo yang memesona.</p>
-                        <button class="btn-outline">Pesan</button>
+                        <a href="<?= whatsapp_link('destinasi', 'Gunung Bromo') ?>" class="btn-outline" target="_blank">Pesan</a>
                     </div>
                 </div>
             </div>
@@ -88,7 +110,7 @@
                     <p>Yogyakarta</p>
                     <div class="destination-desc">
                         <p>Pantai legendaris dengan ombak besar dan pemandangan sunset yang menakjubkan.</p>
-                        <button class="btn-outline">Pesan</button>
+                        <a href="<?= whatsapp_link('destinasi', 'Pantai Parangtritis') ?>" class="btn-outline" target="_blank">Pesan</a>
                     </div>
                 </div>
             </div>
@@ -100,7 +122,7 @@
                     <p>Wonosobo, Jawa Tengah</p>
                     <div class="destination-desc">
                         <p>Kawasan vulkanik dengan udara sejuk, candi kuno, dan telaga warna yang mempesona.</p>
-                        <button class="btn-outline">Pesan</button>
+                        <a href="<?= whatsapp_link('destinasi', 'Dataran Tinggi Dieng') ?>" class="btn-outline" target="_blank">Pesan</a>
                     </div>
                 </div>
             </div>
@@ -112,7 +134,7 @@
                     <p>Bandung, Jawa Barat</p>
                     <div class="destination-desc">
                         <p>Gunung berapi aktif dengan kawah yang bisa dikunjungi dan legenda Sangkuriang.</p>
-                        <button class="btn-outline">Pesan</button>
+                        <a href="<?= whatsapp_link('destinasi', 'Gunung Tangkuban Perahu') ?>" class="btn-outline" target="_blank">Pesan</a>
                     </div>
                 </div>
             </div>
@@ -124,7 +146,7 @@
                     <p>Badung, Bali</p>
                     <div class="destination-desc">
                         <p>Surga tropis dengan pantai pasir putih dan terumbu karang yang indah.</p>
-                        <button class="btn-outline">Pesan</button>
+                        <a href="<?= whatsapp_link('destinasi', 'Pantai Kuta Bali') ?>" class="btn-outline" target="_blank">Pesan</a>
                     </div>
                 </div>
             </div>
@@ -136,7 +158,7 @@
                     <p>Banyuwangi, Jawa Timur</p>
                     <div class="destination-desc">
                         <p>Fenomena blue fire dan danau asam terbesar di dunia dengan warna turquoise.</p>
-                        <button class="btn-outline">Pesan</button>
+                        <a href="<?= whatsapp_link('destinasi', 'Kawah Ijen') ?>" class="btn-outline" target="_blank">Pesan</a>
                     </div>
                 </div>
             </div>
@@ -148,8 +170,8 @@
             <h2>Siap Memulai Perjalanan Anda?</h2>
             <p>Hubungi kami sekarang untuk mendapatkan penawaran terbaik dan konsultasi gratis mengenai rencana perjalanan Anda</p>
             <div class="cta-buttons">
-                <button class="btn-primary"><i class="fas fa-phone-alt"></i> Hubungi Kami</button>
-                <button class="btn-secondary"><i class="fa-brands fa-square-whatsapp"></i> Chat WhatsApp</button>
+                <a href="tel:+6281339339409" class="btn-primary"><i class="fas fa-phone-alt"></i> Hubungi Kami</a>
+                <a href="<?= whatsapp_link('general') ?>" class="btn-secondary" target="_blank"><i class="fa-brands fa-square-whatsapp"></i> Chat WhatsApp</a>
             </div>
         </div>
     </section>
