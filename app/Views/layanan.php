@@ -70,7 +70,7 @@
 
         <div class="destinations-grid">
             <div class="destination-card">
-                <img src="assets/images/bromo.jpeg" alt="Gunung Bromo">
+                <img src="assets/images/layanan/bromo.jpeg" alt="Gunung Bromo">
                 <div class="destination-info">
                     <h3>Gunung Bromo</h3>
                     <p>Malang, Jawa Timur</p>
@@ -82,7 +82,7 @@
             </div>
 
             <div class="destination-card">
-                <img src="assets/images/parangteritis.jpeg" alt="Pantai Parangtritis">
+                <img src="assets/images/layanan/parangteritis.jpeg" alt="Pantai Parangtritis">
                 <div class="destination-info">
                     <h3>Pantai Parangtritis</h3>
                     <p>Yogyakarta</p>
@@ -94,7 +94,7 @@
             </div>
 
             <div class="destination-card">
-                <img src="assets/images/datarantinggidieng.jpeg" alt="Dieng Plateau">
+                <img src="assets/images/layanan/datarantinggidieng.jpeg" alt="Dieng Plateau">
                 <div class="destination-info">
                     <h3>Dataran Tinggi Dieng</h3>
                     <p>Wonosobo, Jawa Tengah</p>
@@ -106,7 +106,7 @@
             </div>
 
             <div class="destination-card">
-                <img src="assets/images/tangkubanperahu.jpeg" alt="Tangkuban Perahu">
+                <img src="assets/images/layanan/tangkubanperahu.jpeg" alt="Tangkuban Perahu">
                 <div class="destination-info">
                     <h3>Gunung Tangkuban Perahu</h3>
                     <p>Bandung, Jawa Barat</p>
@@ -118,7 +118,7 @@
             </div>
 
             <div class="destination-card">
-                <img src="assets/images/pantaikuta.jpeg" alt="Karimunjawa">
+                <img src="assets/images/layanan/pantaikuta.jpeg" alt="Karimunjawa">
                 <div class="destination-info">
                     <h3>Pantai Kuta</h3>
                     <p>Badung, Bali</p>
@@ -130,7 +130,7 @@
             </div>
 
             <div class="destination-card">
-                <img src="assets/images/kawahijen.jpeg" alt="Kawah Ijen">
+                <img src="assets/images/layanan/kawahijen.jpeg" alt="Kawah Ijen">
                 <div class="destination-info">
                     <h3>Kawah Ijen</h3>
                     <p>Banyuwangi, Jawa Timur</p>

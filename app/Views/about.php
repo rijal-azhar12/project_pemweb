@@ -16,7 +16,7 @@
             
             <div class="history-card left-card">
                 <div class="card-image">
-                    <img src="assets/images/fotbar.jpg" alt="Pendirian Perusahaan">
+                    <img src="assets/images/about/fotbar.jpg" alt="Pendirian Perusahaan">
                 </div>
 
                 <div class="card-content">

@@ -1,29 +1,6 @@
 <?= $this->extend('layouts/main') ?>
 <?= $this->section('content') ?>
 
-<style>
-  .contact-header {
-    position: relative;
-    height: 400px;
-    background: url('assets/images/call center.jpeg') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .dark-overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-  }
-  .header-content {
-    position: relative;
-    z-index: 2;
-    color: white;
-    text-align: center;
-  }
-</style>
 
 <section class="contact-header">
   <div class="dark-overlay"></div>
@@ -62,25 +39,81 @@
         </div>
       </div>
 
+      <!-- Ganti bagian form dengan ini -->
       <div class="col-lg-6 p-4">
-        <h2 class="text-primary"><i class="fas fa-paper-plane me-2"></i> Kirim Pesan</h2>
-        <form>
-          <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Nama Lengkap" required>
-          </div>
-          <div class="mb-3">
-            <input type="email" class="form-control" placeholder="Alamat Email" required>
-          </div>
-          <div class="mb-3">
-            <input type="tel" class="form-control" placeholder="Nomor Telepon">
-          </div>
-          <div class="mb-3">
-            <textarea class="form-control" rows="5" placeholder="Pesan Anda" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary w-100">Kirim Pesan</button>
-        </form>
+          <h2 class="text-primary"><i class="fas fa-paper-plane me-2"></i> Kirim Pesan</h2>
+          
+          <?php if (session()->getFlashdata('success')): ?>
+              <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
+          <?php endif; ?>
+
+          <?php if (session()->getFlashdata('errors')): ?>
+              <div class="alert alert-danger"><?= implode('<br>', session()->getFlashdata('errors')) ?></div>
+          <?php endif; ?>
+                    
+          <form action="<?= base_url('/kontak/send') ?>" method="post">
+              <?= csrf_field() ?>
+              <div class="mb-3">
+                  <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required value="<?= old('nama') ?>">
+              </div>
+              <div class="mb-3">
+                  <input type="email" name="email" class="form-control" placeholder="Alamat Email" required value="<?= old('email') ?>">
+              </div>
+              <div class="mb-3">
+                  <input type="tel" name="telepon" class="form-control" placeholder="Nomor Telepon" value="<?= old('telepon') ?>">
+              </div>
+              <div class="mb-3">
+                  <textarea name="pesan" class="form-control" rows="5" placeholder="Pesan Anda" required><?= old('pesan') ?></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Kirim Pesan</button>
+          </form>
       </div>
     </div>
+  </div>
+  <!-- Di bawah form (sebelum tutup section) -->
+  <div class="mt-5">
+      <h3 class="text-primary mb-4"><i class="fas fa-history me-2"></i> Daftar Pesan</h3>
+      
+      <?php if (session()->getFlashdata('success')) : ?>
+          <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
+      <?php endif; ?>
+      
+      <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+              <thead class="table-primary">
+                  <tr>
+                      <th>No</th>
+                      <th>Nama</th>
+                      <th>Email</th>
+                      <th>Telepon</th>
+                      <th>Pesan</th>
+                      <th>Tanggal</th>
+                      <th>Aksi</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <?php $no = 1; ?>
+                  <?php foreach ($pesan as $p) : ?>
+                  <tr>
+                      <td><?= $no++ ?></td>
+                      <td><?= esc($p['nama']) ?></td>
+                      <td><?= esc($p['email']) ?></td>
+                      <td><?= esc($p['telepon']) ?? '-' ?></td>
+                      <td><?= esc($p['pesan']) ?></td>
+                      <td><?= date('d/m/Y H:i', strtotime($p['tanggal'])) ?></td>
+                      <td>
+                          <a href="<?= base_url('/kontak/edit/' . $p['id']) ?>" class="btn btn-sm btn-warning">
+                              <i class="fas fa-edit"></i>
+                          </a>
+                          <a href="<?= base_url('/kontak/delete/' . $p['id']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin hapus?')">
+                              <i class="fas fa-trash"></i>
+                          </a>
+                      </td>
+                  </tr>
+                  <?php endforeach; ?>
+              </tbody>
+          </table>
+      </div>
   </div>
 </section>
 

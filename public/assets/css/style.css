@@ -86,7 +86,7 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Responsive Breakpoint */
+/* Responsive */
 @media (max-width: 768px) {
     .navbar {
         padding: 15px 20px;
@@ -470,7 +470,7 @@ body {
 }
 
 .services-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/images/pantai.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/images/layanan/pantai.jpg');
     background-size: cover;
     background-position: center;
     height: 400px;
@@ -715,60 +715,11 @@ body {
 
 /* HALAMAN ABOUT */
 
-/* Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background: #f9fafb;
-    color: #111827;
-    line-height: 1.6;
-}
-
-/* navbar */
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #ffffff;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-}
-
-nav .logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-
-nav a {
-    text-decoration: none;
-    color: #1f2937;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #3b82f6;
-}
-
 /* header tentang kami */
 .about-header {
     position: relative;
     height: 400px;
-    background-image: url('/assets/images/bromo.jpg');
+    background-image: url('/assets/images/about/bromo.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1080,39 +1031,6 @@ nav a:hover {
     color: #6b7280;
 }
 
-/* Footer */
-.quick-contact {
-    background-color: #e0f2fe;
-    color: #0c4a6e;
-    padding: 50px 40px;
-    text-align: left;
-}
-
-.quick-contact h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.quick-contact ul {
-    list-style: none;
-    margin: 20px 0;
-}
-
-.quick-contact li {
-    margin-bottom: 12px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 16px;
-}
-
-.quick-contact i {
-    color: #0284c7;
-    font-size: 18px;
-    width: 24px;
-    text-align: center;
-}
-
 /* Responsive Design */
 @media (max-width: 992px) {
     .fleet-content {
@@ -1143,4 +1061,27 @@ nav a:hover {
     .fleet-details .achievement-item {
         width: 100%;
     }
+}
+
+/* HALAMAN KONTAK */
+.contact-header {
+    position: relative;
+    height: 400px;
+    background: url('picture/call center.jpeg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dark-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+.header-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
 }

@@ -1,0 +1,65 @@
+CRITICAL - 2025-05-02 18:32:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layanan.php"
+[Method: GET, Route: layanan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layanan.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layanan', [], true)
+ 3 APPPATH\Controllers\layanan.php(8): view('layanan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Layanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Layanan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-02 18:32:03 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layanan.php"
+[Method: GET, Route: layanan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layanan.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layanan', [], true)
+ 3 APPPATH\Controllers\layanan.php(8): view('layanan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Layanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Layanan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-02 18:32:04 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layanan.php"
+[Method: GET, Route: layanan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layanan.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layanan', [], true)
+ 3 APPPATH\Controllers\layanan.php(8): view('layanan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Layanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Layanan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-02 18:32:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layanan.php"
+[Method: GET, Route: layanan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layanan.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layanan', [], true)
+ 3 APPPATH\Controllers\layanan.php(8): view('layanan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Layanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Layanan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-02 18:32:26 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "layanan.php"
+[Method: GET, Route: layanan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layanan.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('layanan', [], true)
+ 3 APPPATH\Controllers\layanan.php(8): view('layanan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Layanan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Layanan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')

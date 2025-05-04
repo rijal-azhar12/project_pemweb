@@ -1,0 +1,366 @@
+CRITICAL - 2025-05-03 13:22:17 --> TypeError: CodeIgniter\Database\BaseBuilder::setBind(): Argument #1 ($key) must be of type string, int given, called in C:\laragon\www\project_pemweb\system\Database\BaseBuilder.php on line 1575
+[Method: POST, Route: kontak/save]
+in SYSTEMPATH\Database\BaseBuilder.php on line 3523.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1575): CodeIgniter\Database\BaseBuilder->setBind(0, '2025-05-03 13:22:17', true)
+ 2 SYSTEMPATH\Model.php(365): CodeIgniter\Database\BaseBuilder->set([...], '2025-05-03 13:22:17', true)
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\kontak.php(56): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\kontak->save()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\kontak))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+ERROR - 2025-05-03 15:46:53 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\laragon\www\project_pemweb\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\project_pemweb\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `fo...', 0)
+#1 C:\laragon\www\project_pemweb\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fo...')
+#2 C:\laragon\www\project_pemweb\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fo...')
+#3 C:\laragon\www\project_pemweb\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fo...', Array, false)
+#4 C:\laragon\www\project_pemweb\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\project_pemweb\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\project_pemweb\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\project_pemweb\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\project_pemweb\app\Controllers\kontak.php(34): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\project_pemweb\system\CodeIgniter.php(933): App\Controllers\kontak->kirimPesan()
+#10 C:\laragon\www\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\kontak))
+#11 C:\laragon\www\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\laragon\www\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\laragon\www\project_pemweb\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#16 {main}
+CRITICAL - 2025-05-03 15:46:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+[Method: POST, Route: kontak/kirim-pesan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `tanggal`, `updated_at`) VALUES (:nama:, :email:, :telepon:, :pesan:, :tanggal:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\kontak.php(34): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\kontak->kirimPesan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\kontak))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 15:46:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `tanggal`, `updated_at`) VALUES (\'Juan praka wijaya\', \'juan.praka.2405356@students.um.ac.id\', \'085755903155\', \'Drivernya sangat profesional dan asik diajak ngobrol saat perjalanan!\', \'2025-05-03 15:46:53\', \'2025-05-03 15:46:53\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `tanggal`, `updated_at`) VALUES (\'Juan praka wijaya\', \'juan.praka.2405356@students.um.ac.id\', \'085755903155\', \'Drivernya sangat profesional dan asik diajak ngobrol saat perjalanan!\', \'2025-05-03 15:46:53\', \'2025-05-03 15:46:53\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `tanggal`, `updated_at`) VALUES (:nama:, :email:, :telepon:, :pesan:, :tanggal:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\kontak.php(34): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\kontak->kirimPesan()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\kontak))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 15:46:53 --> [Caused by] mysqli_sql_exception: Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `tanggal`, `updated_at`) VALUES (\'Juan praka wijaya\', \'juan.praka.2405356@students.um.ac.id\', \'085755903155\', \'Drivernya sangat profesional dan asik diajak ngobrol saat perjalanan!\', \'2025-05-03 15:46:53\', \'2025-05-03 15:46:53\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `tanggal`, `updated_at`) VALUES (\'Juan praka wijaya\', \'juan.praka.2405356@students.um.ac.id\', \'085755903155\', \'Drivernya sangat profesional dan asik diajak ngobrol saat perjalanan!\', \'2025-05-03 15:46:53\', \'2025-05-03 15:46:53\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `tanggal`, `updated_at`) VALUES (\'Juan praka wijaya\', \'juan.praka.2405356@students.um.ac.id\', \'085755903155\', \'Drivernya sangat profesional dan asik diajak ngobrol saat perjalanan!\', \'2025-05-03 15:46:53\', \'2025-05-03 15:46:53\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `tanggal`, `updated_at`) VALUES (:nama:, :email:, :telepon:, :pesan:, :tanggal:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\kontak.php(34): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\kontak->kirimPesan()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\kontak))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:15:27 --> Error: Class "App\Models\formpesan" not found
+[Method: GET, Route: testdb]
+in APPPATH\Controllers\TestDb.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TestDb->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:15:31 --> Error: Class "App\Models\formpesan" not found
+[Method: GET, Route: testdb]
+in APPPATH\Controllers\TestDb.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\TestDb->index()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:18:27 --> Error: Class "App\Models\FormPesanModel" not found
+[Method: POST, Route: kontak/kirim]
+in APPPATH\Controllers\kontak.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:20:31 --> Error: Class "App\Models\FormPesanModel" not found
+[Method: POST, Route: kontak/kirim]
+in APPPATH\Controllers\kontak.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:20:36 --> Error: Class "App\Models\FormPesanModel" not found
+[Method: POST, Route: kontak/kirim]
+in APPPATH\Controllers\kontak.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:20:47 --> Error: Class "App\Models\FormPesanModel" not found
+[Method: POST, Route: kontak/kirim]
+in APPPATH\Controllers\kontak.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:24:22 --> Error: Class "App\Models\FormPesanModel" not found
+[Method: POST, Route: kontak/kirim]
+in APPPATH\Controllers\kontak.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:27:14 --> Error: Class "App\Models\FormPesanModel" not found
+[Method: POST, Route: kontak/kirim]
+in APPPATH\Controllers\kontak.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:27:18 --> Error: Class "App\Models\FormPesanModel" not found
+[Method: POST, Route: kontak/kirim]
+in APPPATH\Controllers\kontak.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:27:24 --> Error: Class "App\Models\FormPesanModel" not found
+[Method: POST, Route: kontak/kirim]
+in APPPATH\Controllers\kontak.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:27:35 --> Error: Class "App\Models\FormPesanModel" not found
+[Method: POST, Route: kontak/kirim]
+in APPPATH\Controllers\kontak.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:28:19 --> Error: Class "App\Models\FormPesanModel" not found
+[Method: POST, Route: kontak/kirim]
+in APPPATH\Controllers\kontak.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:36:07 --> Error: Class "App\Models\FormPesanModel" not found
+[Method: POST, Route: kontak/kirim]
+in APPPATH\Controllers\kontak.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:36:11 --> Error: Class "App\Models\FormPesanModel" not found
+[Method: POST, Route: kontak/kirim]
+in APPPATH\Controllers\kontak.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+ERROR - 2025-05-03 16:40:28 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\laragon\www\project_pemweb\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\project_pemweb\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `fo...', 0)
+#1 C:\laragon\www\project_pemweb\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fo...')
+#2 C:\laragon\www\project_pemweb\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fo...')
+#3 C:\laragon\www\project_pemweb\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fo...', Array, false)
+#4 C:\laragon\www\project_pemweb\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\project_pemweb\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\project_pemweb\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\project_pemweb\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\project_pemweb\app\Controllers\kontak.php(24): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+#10 C:\laragon\www\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#11 C:\laragon\www\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\laragon\www\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\laragon\www\project_pemweb\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#16 {main}
+CRITICAL - 2025-05-03 16:40:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+[Method: POST, Route: kontak/kirim]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `created_at`, `updated_at`) VALUES (:nama:, :email:, :telepon:, :pesan:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\kontak.php(24): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:40:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `created_at`, `updated_at`) VALUES (\'Juan praka wijaya\', \'juan.praka.2405356@students.um.ac.id\', \'085755903155\', \'Drivernya sangat profesional dan asik diajak ngobrol saat perjalanan!\', \'2025-05-03 16:40:28\', \'2025-05-03 16:40:28\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `created_at`, `updated_at`) VALUES (\'Juan praka wijaya\', \'juan.praka.2405356@students.um.ac.id\', \'085755903155\', \'Drivernya sangat profesional dan asik diajak ngobrol saat perjalanan!\', \'2025-05-03 16:40:28\', \'2025-05-03 16:40:28\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `created_at`, `updated_at`) VALUES (:nama:, :email:, :telepon:, :pesan:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\kontak.php(24): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:40:28 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `created_at`, `updated_at`) VALUES (\'Juan praka wijaya\', \'juan.praka.2405356@students.um.ac.id\', \'085755903155\', \'Drivernya sangat profesional dan asik diajak ngobrol saat perjalanan!\', \'2025-05-03 16:40:28\', \'2025-05-03 16:40:28\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `created_at`, `updated_at`) VALUES (\'Juan praka wijaya\', \'juan.praka.2405356@students.um.ac.id\', \'085755903155\', \'Drivernya sangat profesional dan asik diajak ngobrol saat perjalanan!\', \'2025-05-03 16:40:28\', \'2025-05-03 16:40:28\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `created_at`, `updated_at`) VALUES (\'Juan praka wijaya\', \'juan.praka.2405356@students.um.ac.id\', \'085755903155\', \'Drivernya sangat profesional dan asik diajak ngobrol saat perjalanan!\', \'2025-05-03 16:40:28\', \'2025-05-03 16:40:28\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `created_at`, `updated_at`) VALUES (:nama:, :email:, :telepon:, :pesan:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\kontak.php(24): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+ERROR - 2025-05-03 16:41:31 --> mysqli_sql_exception: Unknown column 'created_at' in 'field list' in C:\laragon\www\project_pemweb\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\project_pemweb\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `fo...', 0)
+#1 C:\laragon\www\project_pemweb\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `fo...')
+#2 C:\laragon\www\project_pemweb\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `fo...')
+#3 C:\laragon\www\project_pemweb\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `fo...', Array, false)
+#4 C:\laragon\www\project_pemweb\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\laragon\www\project_pemweb\system\BaseModel.php(839): CodeIgniter\Model->doInsert(Array)
+#6 C:\laragon\www\project_pemweb\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\laragon\www\project_pemweb\system\BaseModel.php(750): CodeIgniter\Model->insert(Array, false)
+#8 C:\laragon\www\project_pemweb\app\Controllers\kontak.php(24): CodeIgniter\BaseModel->save(Array)
+#9 C:\laragon\www\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+#10 C:\laragon\www\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#11 C:\laragon\www\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\laragon\www\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 C:\laragon\www\project_pemweb\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#16 {main}
+CRITICAL - 2025-05-03 16:41:31 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+[Method: POST, Route: kontak/kirim]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `created_at`, `updated_at`) VALUES (:nama:, :email:, :telepon:, :pesan:, :created_at:, :updated_at:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\kontak.php(24): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:41:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `created_at`, `updated_at`) VALUES (\'test\', \'test@gmail.com\', \'086787678\', \'test\', \'2025-05-03 16:41:31\', \'2025-05-03 16:41:31\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `created_at`, `updated_at`) VALUES (\'test\', \'test@gmail.com\', \'086787678\', \'test\', \'2025-05-03 16:41:31\', \'2025-05-03 16:41:31\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `created_at`, `updated_at`) VALUES (:nama:, :email:, :telepon:, :pesan:, :created_at:, :updated_at:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\kontak.php(24): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
+CRITICAL - 2025-05-03 16:41:31 --> [Caused by] mysqli_sql_exception: Unknown column 'created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `created_at`, `updated_at`) VALUES (\'test\', \'test@gmail.com\', \'086787678\', \'test\', \'2025-05-03 16:41:31\', \'2025-05-03 16:41:31\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `created_at`, `updated_at`) VALUES (\'test\', \'test@gmail.com\', \'086787678\', \'test\', \'2025-05-03 16:41:31\', \'2025-05-03 16:41:31\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `created_at`, `updated_at`) VALUES (\'test\', \'test@gmail.com\', \'086787678\', \'test\', \'2025-05-03 16:41:31\', \'2025-05-03 16:41:31\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `form_pesan` (`nama`, `email`, `telepon`, `pesan`, `created_at`, `updated_at`) VALUES (:nama:, :email:, :telepon:, :pesan:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(839): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(750): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\kontak.php(24): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->kirim()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\project_pemweb\\public\\index.php')
