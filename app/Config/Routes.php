@@ -8,6 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Beranda::index');
 $routes->get('beranda', 'Beranda::index');
 $routes->get('about', 'about::index');
+$routes->get('galeri', 'galeri::index');
 $routes->get('layanan', 'Layanan::index');
 $routes->get('/kontak', 'Kontak::index');
 $routes->post('/kontak/send', 'Kontak::sendMessage');

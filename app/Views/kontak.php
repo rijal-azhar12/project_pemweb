@@ -26,15 +26,15 @@
         <div class="d-flex align-items-start mb-4">
           <i class="fab fa-whatsapp fa-lg bg-white text-success p-3 rounded-circle me-3"></i>
           <div>
-          <h5>WhatsApp</h5>
-        <p class="mb-0">
-            <a href="https://wa.me/6281266691786?text=Halo%20CV%20HS%20Jaya%20Abadi,%20saya%20ingin%20bertanya%20tentang%20layanan%20travel%20anda" 
-              class="text-white" 
-              style="text-decoration: none;" 
-              target="_blank">
-              +6281 339 339 409
-            </a>
-        </p>
+            <h5>WhatsApp</h5>
+            <p class="mb-0">
+              <a href="https://wa.me/6281266691786?text=Halo%20CV%20HS%20Jaya%20Abadi,%20saya%20ingin%20bertanya%20tentang%20layanan%20travel%20anda"
+                class="text-white"
+                style="text-decoration: none;"
+                target="_blank">
+                +6281 339 339 409
+              </a>
+            </p>
           </div>
         </div>
         <div class="d-flex align-items-start">
@@ -49,7 +49,7 @@
       <!-- Bagian Form -->
       <div class="col-lg-6 p-4">
         <h2 class="text-primary"><i class="fas fa-paper-plane me-2"></i> Kirim Pesan</h2>
-        
+
         <?php if (session()->getFlashdata('success')): ?>
           <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
         <?php endif; ?>
@@ -57,7 +57,7 @@
         <?php if (session()->getFlashdata('errors')): ?>
           <div class="alert alert-danger"><?= implode('<br>', session()->getFlashdata('errors')) ?></div>
         <?php endif; ?>
-                  
+
         <form action="<?= base_url('/kontak/send') ?>" method="post">
           <?= csrf_field() ?>
           <div class="mb-3">
@@ -81,11 +81,11 @@
   <!-- Daftar Pesan -->
   <div class="container mt-5">
     <h3 class="text-primary mb-4"><i class="fas fa-history me-2"></i> Daftar Pesan</h3>
-    
+
     <?php if (session()->getFlashdata('success')) : ?>
       <div class="alert alert-success"><?= session()->getFlashdata('success') ?></div>
     <?php endif; ?>
-    
+
     <div class="table-responsive">
       <table class="table table-bordered table-hover">
         <thead class="table-primary">
@@ -102,22 +102,22 @@
         <tbody>
           <?php $no = 1; ?>
           <?php foreach ($pesan as $p) : ?>
-          <tr>
-            <td><?= $no++ ?></td>
-            <td><?= esc($p['nama']) ?></td>
-            <td><?= esc($p['email']) ?></td>
-            <td><?= esc($p['telepon']) ?? '-' ?></td>
-            <td><?= esc($p['pesan']) ?></td>
-            <td><?= date('d/m/Y H:i', strtotime($p['tanggal'])) ?></td>
-            <td>
-              <a href="<?= base_url('/kontak/edit/' . $p['id']) ?>" class="btn btn-sm btn-warning">
-                <i class="fas fa-edit"></i>
-              </a>
-              <a href="<?= base_url('/kontak/delete/' . $p['id']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin hapus?')">
-                <i class="fas fa-trash"></i>
-              </a>
-            </td>
-          </tr>
+            <tr>
+              <td><?= $no++ ?></td>
+              <td><?= esc($p['nama']) ?></td>
+              <td><?= esc($p['email']) ?></td>
+              <td><?= esc($p['telepon']) ?? '-' ?></td>
+              <td><?= esc($p['pesan']) ?></td>
+              <td><?= date('d/m/Y H:i', strtotime($p['tanggal'])) ?></td>
+              <td>
+                <a href="<?= base_url('/kontak/edit/' . $p['id']) ?>" class="btn btn-sm btn-warning">
+                  <i class="fas fa-edit"></i>
+                </a>
+                <a href="<?= base_url('/kontak/delete/' . $p['id']) ?>" class="btn btn-sm btn-danger" onclick="return confirm('Yakin hapus?')">
+                  <i class="fas fa-trash"></i>
+                </a>
+              </td>
+            </tr>
           <?php endforeach; ?>
         </tbody>
       </table>

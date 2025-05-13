@@ -278,3 +278,553 @@ in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
 14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 15 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_pemweb\\public\\index.php')
+ERROR - 2025-05-04 10:27:41 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'project_pemweb' in C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'project_pemweb', 3306, '', 0)
+#1 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\sudar\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\sudar\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\sudar\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\sudar\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\sudar\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#8 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#9 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#10 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\sudar\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\sudar\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\sudar\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\sudar\project_pemweb\system\rewrite.php(44): require_once('C:\\Users\\sudar\\...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'project_pemweb' in C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\sudar\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\sudar\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\sudar\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\sudar\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\sudar\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#7 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#8 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#9 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\sudar\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\sudar\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\sudar\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\sudar\project_pemweb\system\rewrite.php(44): require_once('C:\\Users\\sudar\\...')
+#14 {main}
+CRITICAL - 2025-05-04 10:27:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'project_pemweb'
+[Method: GET, Route: kontak]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `form_pesan`
+ORDER BY `tanggal` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\sudar\\project_pemweb\\public\\index.php')
+ERROR - 2025-05-04 10:27:42 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'project_pemweb' in C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'project_pemweb', 3306, '', 0)
+#1 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\sudar\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\sudar\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\sudar\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\sudar\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\sudar\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#8 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#9 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#10 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\sudar\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\sudar\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\sudar\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\sudar\project_pemweb\system\rewrite.php(44): require_once('C:\\Users\\sudar\\...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'project_pemweb' in C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\sudar\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\sudar\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\sudar\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\sudar\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\sudar\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#7 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#8 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#9 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\sudar\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\sudar\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\sudar\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\sudar\project_pemweb\system\rewrite.php(44): require_once('C:\\Users\\sudar\\...')
+#14 {main}
+CRITICAL - 2025-05-04 10:27:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'project_pemweb'
+[Method: GET, Route: kontak]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `form_pesan`
+ORDER BY `tanggal` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\sudar\\project_pemweb\\public\\index.php')
+ERROR - 2025-05-04 10:27:44 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'project_pemweb' in C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'project_pemweb', 3306, '', 0)
+#1 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\sudar\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\sudar\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\sudar\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\sudar\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\sudar\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#8 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#9 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#10 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\sudar\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\sudar\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\sudar\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\sudar\project_pemweb\system\rewrite.php(44): require_once('C:\\Users\\sudar\\...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'project_pemweb' in C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\sudar\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\sudar\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\sudar\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\sudar\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\sudar\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#7 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#8 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#9 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\sudar\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\sudar\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\sudar\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\sudar\project_pemweb\system\rewrite.php(44): require_once('C:\\Users\\sudar\\...')
+#14 {main}
+CRITICAL - 2025-05-04 10:27:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'project_pemweb'
+[Method: GET, Route: kontak]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `form_pesan`
+ORDER BY `tanggal` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\sudar\\project_pemweb\\public\\index.php')
+ERROR - 2025-05-04 10:27:54 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'project_pemweb' in C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'project_pemweb', 3306, '', 0)
+#1 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\sudar\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\sudar\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\sudar\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\sudar\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\sudar\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#8 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#9 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#10 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\sudar\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\sudar\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\sudar\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\sudar\project_pemweb\system\rewrite.php(44): require_once('C:\\Users\\sudar\\...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'project_pemweb' in C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\sudar\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\sudar\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\sudar\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\sudar\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\sudar\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#7 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#8 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#9 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\sudar\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\sudar\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\sudar\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\sudar\project_pemweb\system\rewrite.php(44): require_once('C:\\Users\\sudar\\...')
+#14 {main}
+CRITICAL - 2025-05-04 10:27:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'project_pemweb'
+[Method: GET, Route: kontak]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `form_pesan`
+ORDER BY `tanggal` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\sudar\\project_pemweb\\public\\index.php')
+ERROR - 2025-05-04 10:27:56 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'project_pemweb' in C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'project_pemweb', 3306, '', 0)
+#1 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\sudar\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\sudar\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\sudar\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\sudar\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\sudar\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#8 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#9 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#10 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\sudar\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\sudar\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\sudar\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\sudar\project_pemweb\system\rewrite.php(44): require_once('C:\\Users\\sudar\\...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'project_pemweb' in C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\sudar\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\sudar\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\sudar\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\sudar\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\sudar\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#7 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#8 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#9 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\sudar\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\sudar\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\sudar\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\sudar\project_pemweb\system\rewrite.php(44): require_once('C:\\Users\\sudar\\...')
+#14 {main}
+CRITICAL - 2025-05-04 10:27:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'project_pemweb'
+[Method: GET, Route: kontak]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `form_pesan`
+ORDER BY `tanggal` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\sudar\\project_pemweb\\public\\index.php')
+ERROR - 2025-05-04 10:28:35 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'project_pemweb' in C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'project_pemweb', 3306, '', 0)
+#1 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\sudar\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\sudar\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\sudar\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\sudar\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\sudar\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#8 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#9 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#10 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\sudar\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\sudar\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\sudar\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\sudar\project_pemweb\system\rewrite.php(44): require_once('C:\\Users\\sudar\\...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'project_pemweb' in C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\sudar\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\sudar\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\sudar\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\sudar\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\sudar\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#7 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#8 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#9 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\sudar\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\sudar\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\sudar\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\sudar\project_pemweb\system\rewrite.php(44): require_once('C:\\Users\\sudar\\...')
+#14 {main}
+CRITICAL - 2025-05-04 10:28:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'project_pemweb'
+[Method: GET, Route: kontak]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `form_pesan`
+ORDER BY `tanggal` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\sudar\\project_pemweb\\public\\index.php')
+ERROR - 2025-05-04 10:28:36 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'project_pemweb' in C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'project_pemweb', 3306, '', 0)
+#1 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\sudar\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\sudar\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\sudar\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\sudar\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\sudar\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#8 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#9 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#10 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\sudar\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\sudar\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\sudar\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\sudar\project_pemweb\system\rewrite.php(44): require_once('C:\\Users\\sudar\\...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'project_pemweb' in C:\Users\sudar\project_pemweb\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\sudar\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\sudar\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\sudar\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\sudar\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\sudar\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\sudar\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#7 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#8 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#9 C:\Users\sudar\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\sudar\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\sudar\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\sudar\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\sudar\project_pemweb\system\rewrite.php(44): require_once('C:\\Users\\sudar\\...')
+#14 {main}
+CRITICAL - 2025-05-04 10:28:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'project_pemweb'
+[Method: GET, Route: kontak]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `form_pesan`
+ORDER BY `tanggal` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\sudar\\project_pemweb\\public\\index.php')
+ERROR - 2025-05-04 10:35:04 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'project_pemweb' in C:\xampp\htdocs\project_pemweb\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\project_pemweb\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'project_pemweb', 3306, '', 0)
+#1 C:\xampp\htdocs\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#8 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#9 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#10 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\project_pemweb\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'project_pemweb' in C:\xampp\htdocs\project_pemweb\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#7 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#8 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#9 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\project_pemweb\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-05-04 10:35:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'project_pemweb'
+[Method: GET, Route: kontak]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `form_pesan`
+ORDER BY `tanggal` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_pemweb\\public\\index.php')
+ERROR - 2025-05-04 10:35:06 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'project_pemweb' in C:\xampp\htdocs\project_pemweb\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\project_pemweb\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'project_pemweb', 3306, '', 0)
+#1 C:\xampp\htdocs\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#8 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#9 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#10 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\project_pemweb\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'project_pemweb' in C:\xampp\htdocs\project_pemweb\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#7 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#8 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#9 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\project_pemweb\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-05-04 10:35:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'project_pemweb'
+[Method: GET, Route: kontak]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `form_pesan`
+ORDER BY `tanggal` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_pemweb\\public\\index.php')
+ERROR - 2025-05-04 10:35:17 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'project_pemweb' in C:\xampp\htdocs\project_pemweb\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\project_pemweb\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'project_pemweb', 3306, '', 0)
+#1 C:\xampp\htdocs\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#8 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#9 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#10 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\project_pemweb\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'project_pemweb' in C:\xampp\htdocs\project_pemweb\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\project_pemweb\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\project_pemweb\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\project_pemweb\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\project_pemweb\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\project_pemweb\system\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\project_pemweb\app\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\project_pemweb\app\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+#7 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(933): App\Controllers\Kontak->index()
+#8 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#9 C:\xampp\htdocs\project_pemweb\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\project_pemweb\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\project_pemweb\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\project_pemweb\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\project_pemweb\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2025-05-04 10:35:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'project_pemweb'
+[Method: GET, Route: kontak]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `form_pesan`
+ORDER BY `tanggal` DESC', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(675): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\FormPesanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\kontak.php(12): App\Models\FormPesanModel->getPesan()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Kontak->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\project_pemweb\\public\\index.php')
