@@ -1,10 +1,10 @@
 <?= $this->extend('layouts/main') ?>
 <?= $this->section('content') ?>
 
-<section class="hero">
+<section class="gll_hero">
     <div class="container">
-        <h1>Testimoni & Galeri</h1>
-        <p>Suara pelanggan & momen perjalanan terbaik bersama kami</p>
+        <h1>Galeri</h1>
+        <p>Momen perjalanan terbaik bersama kami</p>
     </div>
 </section>
 
@@ -22,7 +22,7 @@
 
             <div class="gallery-item" data-img="absolute.jpg" data-title="Study Tour Jogja"
                 data-desc="Mengunjungi situs sejarah di Yogyakarta">
-                <img src="absolute.jpg" alt="Study Tour Jogja" />
+                <img src="<?= base_url('assets/images/galeri/ping.jpg') ?>" alt="Study Tour Jogja" />
                 <div class="gallery-overlay">
                     <h3>Study Tour Jogja</h3>
                     <p>Mengunjungi situs sejarah di Yogyakarta</p>
@@ -40,7 +40,7 @@
 
             <div class="gallery-item" data-img="absolute.jpg" data-title="Wisata Bromo"
                 data-desc="Melihat keindahan Gunung Bromo di pagi hari">
-                <img src="absolute.jpg" alt="Wisata Bromo" />
+                <img src="<?= base_url('assets/images/galeri/ping.jpg') ?>" alt="Wisata Bromo" />
                 <div class="gallery-overlay">
                     <h3>Wisata Bromo</h3>
                     <p>Melihat keindahan Gunung Bromo di pagi hari</p>
@@ -48,7 +48,7 @@
             </div>
 
             <div class="gallery-item" data-img="pp.jpg" data-title="Family Gathering" data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
-                <img src="absolute.jpg" alt="Family Gathering" />
+                <img src="<?= base_url('assets/images/galeri/ping.jpg') ?>" alt="Family Gathering" />
                 <div class="gallery-overlay">
                     <h3>Family Gathering</h3>
                     <p>Kebersamaan di Taman Safari Prigen</p>
