@@ -13,54 +13,54 @@
         <h2 class="section-title">Galeri Perjalanan</h2>
         <div class="gallery-grid">
             <div class="gallery-item" data-img="absolute.jpg" data-title="Perjalanan ke Bali" data-desc="Tour bersama rombongan PT. Sejahtera Abadi">
-                <img src="<?= base_url('assets/images/galeri/pp.jpg') ?>" alt="Tebing Breksi">
+                <img src="<?= base_url('assets/images/galeri/tourbali.jpg') ?>" alt="Perjalanan ke Bali">
                 <div class="gallery-overlay">
-                    <h3>Perjalanan ke Bali</h3>
-                    <p>Tour bersama rombongan PT. Sejahtera Abadi</p>
+                    <h3>Tour ke Bali</h3>
+                    <p>Tour bersama keluarga besar H. Iftar menuju Bali</p>
                 </div>
             </div>
 
-            <div class="gallery-item" data-img="absolute.jpg" data-title="Study Tour Jogja"
-                data-desc="Mengunjungi situs sejarah di Yogyakarta">
-                <img src="<?= base_url('assets/images/galeri/ping.jpg') ?>" alt="Study Tour Jogja" />
+            <div class="gallery-item" data-title="Study Banding di Malang"
+                data-desc="Mengunjungi Pusat Bisnis Komodo Industri di Malang">
+                <img src="<?= base_url('assets/images/galeri/studi.jpg') ?>" alt="Study Banding di Malang" />
                 <div class="gallery-overlay">
-                    <h3>Study Tour Jogja</h3>
-                    <p>Mengunjungi situs sejarah di Yogyakarta</p>
+                    <h3>Study Banding di Malang</h3>
+                    <p>Mengunjungi Pusat Bisnis Komodo Industri di Malang</p>
                 </div>
             </div>
 
-            <div class="gallery-item" data-img="absolute.jpg" data-title="Pantai Malang"
+            <div class="gallery-item" data-img="absolute.jpg" data-title="Reuni SMAN 1 Bekasi"
                 data-desc="Menikmati keindahan pantai di Malang Selatan">
-                <img src="<?= base_url('assets/images/galeri/ping.jpg') ?>" alt="Tebing Breksi">
+                <img src="<?= base_url('assets/images/galeri/reuni.jpeg') ?>" alt="Tebing Breksi">
                 <div class="gallery-overlay">
-                    <h3>Pantai Malang</h3>
-                    <p>Menikmati keindahan pantai di Malang Selatan</p>
+                    <h3>Reuni SMAN 1 Bekasi</h3>
+                    <p>Makan, berbincang, dan mengenang masa-masa sekolah SMAN 1 Bekasi</p>
                 </div>
             </div>
 
             <div class="gallery-item" data-img="absolute.jpg" data-title="Wisata Bromo"
                 data-desc="Melihat keindahan Gunung Bromo di pagi hari">
-                <img src="<?= base_url('assets/images/galeri/ping.jpg') ?>" alt="Wisata Bromo" />
+                <img src="<?= base_url('assets/images/galeri/danau.jpeg') ?>" alt="Wisata Ranu Kumbolo" />
                 <div class="gallery-overlay">
-                    <h3>Wisata Bromo</h3>
-                    <p>Melihat keindahan Gunung Bromo di pagi hari</p>
+                    <h3>Wisata Ranu Kumbolo</h3>
+                    <p>Menikmati tepi danau Ranu Kumbolo bersama teman-teman</p>
                 </div>
             </div>
 
-            <div class="gallery-item" data-img="pp.jpg" data-title="Family Gathering" data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
-                <img src="<?= base_url('assets/images/galeri/ping.jpg') ?>" alt="Family Gathering" />
+            <div class="gallery-item" data-img="pp.jpg" data-title="Sepulang dari Baitullah" data-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
+                <img src="<?= base_url('assets/images/galeri/jemput.jpg') ?>" alt="Sepulang dari Baitullah" />
                 <div class="gallery-overlay">
-                    <h3>Family Gathering</h3>
-                    <p>Kebersamaan di Taman Safari Prigen</p>
+                    <h3>Sepulang dari Baitullah</h3>
+                    <p>Agen Travel menjemput rombongan dari perjalanan ke Baitullah</p>
                 </div>
             </div>
 
-            <div class="gallery-item" data-img="/api/placeholder/400/320" data-title="Ziarah Wali Songo"
-                data-desc="Perjalanan religius mengunjungi makam para wali">
-                <img src="/api/placeholder/400/320" alt="Ziarah Wali Songo" />
+            <div class="gallery-item" data-img="/api/placeholder/400/320" data-title="Jalan-jalan bersama warga dusun Kampung Baru"
+                data-desc="Dokumentasi kegiatan wisata warga RT 3 yang diisi dengan kebersamaan, kuliner, dan momen seru.">
+                <img src="<?= base_url('assets/images/galeri/k_baru.jpg') ?>" alt="Jalan-jalan bersama warga dusun Kampung Baru" />
                 <div class="gallery-overlay">
-                    <h3>Ziarah Wali Songo</h3>
-                    <p>Perjalanan religius mengunjungi makam para wali</p>
+                    <h3>Jalan-jalan bersama warga dusun Kampung Baru</h3>
+                    <p>Dokumentasi kegiatan wisata warga RT 3 yang diisi dengan kebersamaan, kuliner, dan momen seru.</p>
                 </div>
             </div>
         </div>
