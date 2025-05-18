@@ -91,77 +91,21 @@ function whatsapp_link($service, $destination = '') {
         </div>
 
         <div class="destinations-grid">
-            <div class="destination-card">
-                <img src="assets/images/layanan/bromo.jpeg" alt="Gunung Bromo">
-                <div class="destination-info">
-                    <h3>Gunung Bromo</h3>
-                    <p>Malang, Jawa Timur</p>
-                    <div class="destination-desc">
-                        <p>Nikmati keindahan sunrise di atas awan dan pemandangan kawah Bromo yang memesona.</p>
-                        <a href="<?= whatsapp_link('destinasi', 'Gunung Bromo') ?>" class="btn-outline" target="_blank">Pesan</a>
+            <?php foreach ($destinations as $item): ?>
+                <div class="destination-card">
+                    <img src="<?= base_url($item['file_path']) ?>" alt="<?= $item['alt_text'] ?>">
+                    <div class="destination-info">
+                        <h3><?= $item['title'] ?></h3>
+                        <p><?= $item['location'] ?></p>
+                        <div class="destination-desc">
+                            <p><?= $item['description'] ?></p>
+                            <a href="<?= whatsapp_link('destinasi', $item['title']) ?>" 
+                            class="btn-outline" 
+                            target="_blank">Pesan</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="destination-card">
-                <img src="assets/images/layanan/parangteritis.jpeg" alt="Pantai Parangtritis">
-                <div class="destination-info">
-                    <h3>Pantai Parangtritis</h3>
-                    <p>Yogyakarta</p>
-                    <div class="destination-desc">
-                        <p>Pantai legendaris dengan ombak besar dan pemandangan sunset yang menakjubkan.</p>
-                        <a href="<?= whatsapp_link('destinasi', 'Pantai Parangtritis') ?>" class="btn-outline" target="_blank">Pesan</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="destination-card">
-                <img src="assets/images/layanan/datarantinggidieng.jpeg" alt="Dieng Plateau">
-                <div class="destination-info">
-                    <h3>Dataran Tinggi Dieng</h3>
-                    <p>Wonosobo, Jawa Tengah</p>
-                    <div class="destination-desc">
-                        <p>Kawasan vulkanik dengan udara sejuk, candi kuno, dan telaga warna yang mempesona.</p>
-                        <a href="<?= whatsapp_link('destinasi', 'Dataran Tinggi Dieng') ?>" class="btn-outline" target="_blank">Pesan</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="destination-card">
-                <img src="assets/images/layanan/tangkubanperahu.jpeg" alt="Tangkuban Perahu">
-                <div class="destination-info">
-                    <h3>Gunung Tangkuban Perahu</h3>
-                    <p>Bandung, Jawa Barat</p>
-                    <div class="destination-desc">
-                        <p>Gunung berapi aktif dengan kawah yang bisa dikunjungi dan legenda Sangkuriang.</p>
-                        <a href="<?= whatsapp_link('destinasi', 'Gunung Tangkuban Perahu') ?>" class="btn-outline" target="_blank">Pesan</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="destination-card">
-                <img src="assets/images/layanan/pantaikuta.jpeg" alt="Karimunjawa">
-                <div class="destination-info">
-                    <h3>Pantai Kuta</h3>
-                    <p>Badung, Bali</p>
-                    <div class="destination-desc">
-                        <p>Surga tropis dengan pantai pasir putih dan terumbu karang yang indah.</p>
-                        <a href="<?= whatsapp_link('destinasi', 'Pantai Kuta Bali') ?>" class="btn-outline" target="_blank">Pesan</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="destination-card">
-                <img src="assets/images/layanan/kawahijen.jpeg" alt="Kawah Ijen">
-                <div class="destination-info">
-                    <h3>Kawah Ijen</h3>
-                    <p>Banyuwangi, Jawa Timur</p>
-                    <div class="destination-desc">
-                        <p>Fenomena blue fire dan danau asam terbesar di dunia dengan warna turquoise.</p>
-                        <a href="<?= whatsapp_link('destinasi', 'Kawah Ijen') ?>" class="btn-outline" target="_blank">Pesan</a>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </section>
 

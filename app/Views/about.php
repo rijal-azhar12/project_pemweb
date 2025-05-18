@@ -15,9 +15,10 @@
         <div class="container">
             
             <div class="history-card left-card">
-                <div class="card-image">
-                    <img src="assets/images/about/fotbar.jpg" alt="Pendirian Perusahaan">
-                </div>
+            <div class="card-image">
+                <img src="<?= base_url($historyImage['file_path'] ?? 'assets/images/about/fotbar.jpg') ?>" 
+                    alt="<?= $historyImage['alt_text'] ?? 'Pendirian Perusahaan' ?>">
+            </div>
 
                 <div class="card-content">
                     <h3>Sedikit Sejarah Kami</h3>
@@ -66,7 +67,8 @@
                     
                     <div class="fleet-content">
                         <div class="fleet-image">
-                            <img src="assets/images/hiace.jpg" alt="Armada Profesional">
+                            <img src="<?= base_url($fleetImage['file_path'] ?? 'assets/images/hiace.jpg') ?>" 
+                                alt="<?= $fleetImage['alt_text'] ?? 'Armada Profesional' ?>">
                         </div>
                         <div class="fleet-details">
                             <h3>Armada Profesional</h3>

@@ -10,7 +10,7 @@
                     padding: 6px 12px;
                     border-radius: 20px;
                     font-size: 14px;
-                    /* color: #2563eb; */
+                    color: #2563eb;     
                 ">
             ⭐ Agen Travel Terpercaya
         </div>
@@ -72,39 +72,27 @@
         <p>Kami berkomitmen memberikan layanan terbaik untuk memastikan perjalanan Anda nyaman, aman, dan menyenangkan.</p>
         <p>Kami memiliki beberapa keunggulan diantara lain:</p>
     </div>
-    <div class="feature">
-        <img src="assets/images/beranda/sopir.jpeg" alt="Sopir Berpengalaman" />
-        <h3>Sopir Berpengalaman</h3>
-        <p>Tim sopir profesional dengan pengetahuan rute yang luas dan ramah.</p>
-    </div>
-    <div class="feature">
-        <img src="assets/images/beranda/sigra.jpeg" alt="Armada Terbaik" />
-        <h3>Mobil Terawat</h3>
-        <p>Mobil selalu dalam kondisi prima untuk kenyamanan dan keamanan perjalanan Anda.</p>
-    </div>
-    <div class="feature">
-        <img src="assets/images/beranda/money.jpeg" alt="Harga Terjangkau" />
-        <h3>Harga Terjangkau</h3>
-        <p>Layanan premium dengan harga yang bersahabat untuk semua kalangan.</p>
+    <div class="features-container"> 
+        <?php foreach ($features as $img): ?>
+        <div class="feature">
+            <img src="<?= base_url($img['file_path']) ?>" alt="<?= $img['alt_text'] ?>">
+            <h3><?= $img['title'] ?></h3>
+            <p><?= $img['description'] ?? '' ?></p>
+        </div>
+        <?php endforeach; ?>
     </div>
 </section>
 
 <section class="services">
     <h2>Layanan Kami</h2>
-    <div class="service-item">
-        <img src="assets/images/beranda/hiace.jpeg" alt="Transportasi" />
-        <h3>Transportasi Wisata</h3>
-        <p>Menyediakan transportasi nyaman untuk perjalanan wisata ke berbagai destinasi.</p>
-    </div>
-    <div class="service-item">
-        <img src="assets/images/beranda/sewamobil.jpeg" alt="Sewa Mobil" />
-        <h3>Sewa Mobil</h3>
-        <p>Mobil-mobil premium siap disewa dengan sopir berpengalaman.</p>
-    </div>
-    <div class="service-item">
-        <img src="assets/images/beranda/seat.jpeg" alt="Tour Guide" />
-        <h3>Travel Conventional</h3>
-        <p>Menyediakan travel konvensional yang siap mengantar anda kapanpun dan dimanapun</p>
+    <div class="services-container"> 
+        <?php foreach ($services as $img): ?>
+        <div class="service-item">
+            <img src="<?= base_url($img['file_path']) ?>" alt="<?= $img['alt_text'] ?>">
+            <h3><?= $img['title'] ?></h3>
+            <p><?= $img['description'] ?? '' ?></p>
+        </div>
+        <?php endforeach; ?>
     </div>
 </section>
 

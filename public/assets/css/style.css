@@ -11,7 +11,7 @@ body {
 }
 
 /* Navbar Base Style */
-.navbar {
+.main-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +24,7 @@ body {
 }
 
 /* Logo Style */
-.navbar .logo {
+.main-navbar .logo {
   font-size: 24px;
   font-weight: bold;
   margin-left: 50px;
@@ -87,7 +87,7 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .navbar {
+  .main-navbar {
     padding: 15px 20px;
   }
 
@@ -133,6 +133,7 @@ body {
   }
 }
 
+/* HALAMAN BERANDA */
 .btn-primary {
   background-color: #3b82f6;
   color: white;
@@ -159,7 +160,7 @@ body {
 
 .hero {
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 5px auto;
   padding: 80px 70px;
   display: flex;
   align-items: center;
@@ -339,6 +340,16 @@ body {
   transform: translateY(-5px);
 }
 
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
 .feature img {
   width: 100px;
   height: 100px;
@@ -363,6 +374,16 @@ body {
   margin: 60px auto;
   padding: 60px 40px;
   text-align: center;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 20px;
 }
 
 .services h2 {
@@ -435,7 +456,7 @@ body {
   color: #3b82f6;
 }
 
-/* Gaya dasar quick-contact (tetap sama) */
+/* FOOTER */
 .quick-contact {
   background-color: #e0f2fe;
   color: #0c4a6e;
@@ -488,7 +509,7 @@ body {
   text-align: center;
 }
 
-/* Layanan Page Styles */
+/* HALAMAN LAYANAN */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -741,9 +762,8 @@ body {
   }
 }
 
-/* HALAMAN ABOUT */
+/* HALAMAN TENTANG KAMI */
 
-/* header tentang kami */
 .about-header {
   position: relative;
   height: 400px;
@@ -1336,7 +1356,7 @@ body {
   }
 }
 
-/* Gallery Section */
+/* HALAMAN GALERI */
 .gll_hero {
   color: white;
   background-image: url("/assets/images/galeri/pp.jpg");
