@@ -72,7 +72,8 @@
                         </div>
                         <div class="fleet-details">
                             <h3>Armada Profesional</h3>
-                            <p>Dengan armada kendaraan yang terawat dan driver profesional, kami siap menjadi partner transportasi Anda untuk kebutuhan pribadi, bisnis, maupun wisata di seluruh Pulau Jawa. Kepuasan pelanggan adalah prioritas utama kami.</p>
+                            <p>Dengan armada kendaraan yang terawat dan driver profesional, kami 
+                                siap menjadi partner transportasi Anda untuk kebutuhan pribadi, bisnis, maupun wisata di seluruh Pulau Jawa. Kepuasan pelanggan adalah prioritas utama kami.</p>
                             
                             <div class="achievement-grid">
                                 <div class="achievement-item">

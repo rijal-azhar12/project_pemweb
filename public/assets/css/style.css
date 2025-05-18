@@ -456,7 +456,7 @@ body {
   color: #3b82f6;
 }
 
-/* FOOTER */
+<<<<<<< Updated upstream
 .quick-contact {
   background-color: #e0f2fe;
   color: #0c4a6e;
@@ -464,49 +464,123 @@ body {
   text-align: left;
 }
 
-.quick-contact h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #0c4a6e;
+footer {
+  background-color: #3b82f6;
+  color: hsl(0, 0%, 100%);
+  padding: 20px 0;
+  font-family: Arial, sans-serif;
 }
 
-/* Gaya untuk contact links */
+.footer-container {
+  display: flex;
+  flex-direction: column; /* Vertikal di semua layar */
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+/* Gaya untuk judul section */
+.footer-section h3 {
+  font-size: 25px;
+  margin-bottom: 15px;
+  color: hsl(202, 100%, 98%);
+}
+
+.footer-section li{
+list-style-type: none;
+}
+
+/* Gaya untuk link halaman */
+
 .contact-links {
+  margin: 0;
+  padding-left: 0;
   list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.contact-links li {
-  margin-bottom: 10px;
-  font-size: 16px;
 }
 
 .contact-links a {
-  color: #0c4a6e;
+  color: hsl(0, 0%, 100%);
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: color 0.3s ease;
 }
 
-/* Mengatur semua state link agar warnanya konsisten */
-.contact-links a:link,
-.contact-links a:visited,
-.contact-links a:active {
-  color: #0c4a6e;
-}
-
-.contact-links a:hover {
-  color: #0284c7;
+.contact-links li {
+  line-height: 1.5;
+  font-size: 17px;
 }
 
 .contact-links i {
-  color: #0284c7;
-  font-size: 18px;
-  width: 20px;
-  text-align: center;
+  margin-right: 6px;
+}
+
+.page-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-links li {
+  margin-bottom: 10px;
+}
+
+.page-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  transition: color 0.3s ease;
+}
+
+.page-links a:hover {
+  color: hsl(202, 100%, 82%);
+}
+
+.address-text {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-size: 17px;
+}
+
+.map-link {
+  display: block;
+  margin-top: 10px;
+}
+
+.map-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border: 1px solid hsl(202, 100%, 86%);
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.map-image:hover {
+    transform: scale(1.02);
+}
+
+/* Media Query untuk desktop */
+@media (min-width: 768px) {
+  .footer-container {
+      flex-direction: row; /* Horizontal di desktop */
+  }
+  
+  .footer-section {
+      flex: 1;
+  }
+  
+  .divider {
+      height: auto;
+      width: 1px;
+      margin: 0 10px;
+  }
 }
 
 /* HALAMAN LAYANAN */
@@ -559,6 +633,7 @@ body {
   color: #111827;
   margin-bottom: 15px;
 }
+
 
 .section-header p {
   color: #4b5563;
@@ -697,8 +772,8 @@ body {
 }
 
 .cta-section {
-  background: #3b82f6;
-  color: white;
+  background: #e0edff;
+  color: #111827;
   padding: 60px 20px;
   margin-top: 60px;
   text-align: center;
