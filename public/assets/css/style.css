@@ -1359,9 +1359,11 @@ body {
 /* HALAMAN GALERI */
 .gll_hero {
   color: white;
-  background-image: url("/assets/images/galeri/pp.jpg");
-  padding: 80px 0;
+  height: 400px;
+  background-image: url("/assets/images/galeri/bg.jpg");
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .gll_hero h1 {

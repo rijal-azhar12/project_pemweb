@@ -3,41 +3,42 @@
 
 <?php
 // WhatsApp helper function
-function whatsapp_link($service, $destination = '') {
+function whatsapp_link($service, $destination = '')
+{
     $number = "6281266691786"; // Your WhatsApp number
-    
+
     $templates = [
         'antar-jemput' => "Halo CV HS Jaya Abadi,\nSaya ingin memesan layanan Antar Jemput Antar Kota dengan detail:\n\n• Jenis Kendaraan: \n• Tanggal: \n• Jam Penjemputan: \n• Lokasi Penjemputan: \n• Tujuan: \n• Jumlah Penumpang: ",
-        
-        'liburan' => "Halo CV HS Jaya Abadi,\nSaya ingin memesan layanan Pengantaran Liburan dengan detail:\n\n• Destinasi: ".($destination ?: '')."\n• Tanggal Berangkat: \n• Tanggal Pulang: \n• Jumlah Orang: \n• Jenis Kendaraan: \n• Butuh Tour Guide: (Ya/Tidak)",
-        
+
+        'liburan' => "Halo CV HS Jaya Abadi,\nSaya ingin memesan layanan Pengantaran Liburan dengan detail:\n\n• Destinasi: " . ($destination ?: '') . "\n• Tanggal Berangkat: \n• Tanggal Pulang: \n• Jumlah Orang: \n• Jenis Kendaraan: \n• Butuh Tour Guide: (Ya/Tidak)",
+
         'sewa-mobil' => "Halo CV HS Jaya Abadi,\nSaya ingin menyewa mobil + sopir dengan detail:\n\n• Jenis Mobil: \n• Durasi Sewa: \n• Tanggal Mulai: \n• Lokasi Penjemputan: \n• Tujuan: \n• Kebutuhan Khusus: ",
-        
+
         'destinasi' => "Halo CV HS Jaya Abadi,\nSaya ingin pesan transportasi ke $destination dengan detail:\n\n• Tanggal Kunjungan: \n• Jumlah Orang: \n• Jenis Kendaraan: \n• Butuh Tour Guide: (Ya/Tidak)\n• Catatan Tambahan: ",
-        
+
         'general' => "Halo CV HS Jaya Abadi,\nSaya ingin bertanya tentang layanan Anda.\n\nKebutuhan saya: "
     ];
-    
+
     $message = $templates[$service] ?? $templates['general'];
-    return "https://wa.me/$number?text=".rawurlencode($message);
+    return "https://wa.me/$number?text=" . rawurlencode($message);
 }
 ?>
 
-    <section class="services-hero">
-        <div class="container">
-            <div class="services-hero-content">
-                <h1>Layanan Profesional Kami</h1>
-                <p>Menyediakan solusi transportasi terbaik untuk perjalanan bisnis dan wisata Anda di seluruh Pulau Jawa</p>
-            </div>
+<section class="services-hero">
+    <div class="container">
+        <div class="services-hero-content">
+            <h1>Layanan Profesional Kami</h1>
+            <p>Menyediakan solusi transportasi terbaik untuk perjalanan bisnis dan wisata Anda di seluruh Pulau Jawa</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="main-services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Layanan Utama Kami</h2>
-                <p class="subheading">Kami menyediakan berbagai layanan transportasi untuk kebutuhan perjalanan Anda</p>
-            </div>
+<section class="main-services">
+    <div class="container">
+        <div class="section-header">
+            <h2>Layanan Utama Kami</h2>
+            <p class="subheading">Kami menyediakan berbagai layanan transportasi untuk kebutuhan perjalanan Anda</p>
+        </div>
 
         <div class="services-grid">
             <div class="service-card">
@@ -82,42 +83,42 @@ function whatsapp_link($service, $destination = '') {
                 <a href="<?= whatsapp_link('sewa-mobil') ?>" class="btn-primary" target="_blank">Pesan Sekarang</a>
             </div>
         </div>
-    </section>
+</section>
 
-    <section class="popular-destinations">
-        <div class="section-header">
-            <h2>Destinasi Populer di Pulau Jawa</h2>
-            <p>Beberapa lokasi wisata favorit yang sering kami layani</p>
-        </div>
+<section class="popular-destinations">
+    <div class="section-header">
+        <h2>Destinasi Populer di Pulau Jawa</h2>
+        <p>Beberapa lokasi wisata favorit yang sering kami layani</p>
+    </div>
 
-        <div class="destinations-grid">
-            <?php foreach ($destinations as $item): ?>
-                <div class="destination-card">
-                    <img src="<?= base_url($item['file_path']) ?>" alt="<?= $item['alt_text'] ?>">
-                    <div class="destination-info">
-                        <h3><?= $item['title'] ?></h3>
-                        <p><?= $item['location'] ?></p>
-                        <div class="destination-desc">
-                            <p><?= $item['description'] ?></p>
-                            <a href="<?= whatsapp_link('destinasi', $item['title']) ?>" 
-                            class="btn-outline" 
+    <div class="destinations-grid">
+        <?php foreach ($destinations as $item): ?>
+            <div class="destination-card">
+                <img src="<?= base_url($item['file_path']) ?>" alt="<?= $item['alt_text'] ?>">
+                <div class="destination-info">
+                    <h3><?= $item['title'] ?></h3>
+                    <p><?= $item['location'] ?></p>
+                    <div class="destination-desc">
+                        <p><?= $item['description'] ?></p>
+                        <a href="<?= whatsapp_link('destinasi', $item['title']) ?>"
+                            class="btn-outline"
                             target="_blank">Pesan</a>
-                        </div>
                     </div>
                 </div>
-            <?php endforeach; ?>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="cta-content">
-            <h2>Siap Memulai Perjalanan Anda?</h2>
-            <p>Hubungi kami sekarang untuk mendapatkan penawaran terbaik dan konsultasi gratis mengenai rencana perjalanan Anda</p>
-            <div class="cta-buttons">
-                <a href="tel:+6281339339409" class="btn-primary"><i class="fas fa-phone-alt"></i> Hubungi Kami</a>
-                <a href="<?= whatsapp_link('general') ?>" class="btn-secondary" target="_blank"><i class="fa-brands fa-square-whatsapp"></i> Chat WhatsApp</a>
             </div>
+        <?php endforeach; ?>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="cta-content">
+        <h2>Siap Memulai Perjalanan Anda?</h2>
+        <p>Hubungi kami sekarang untuk mendapatkan penawaran terbaik dan konsultasi gratis mengenai rencana perjalanan Anda</p>
+        <div class="cta-buttons">
+            <a href="tel:+6281339339409" class="btn-primary"><i class="fas fa-phone-alt"></i> Hubungi Kami</a>
+            <a href="<?= whatsapp_link('general') ?>" class="btn-secondary" target="_blank"><i class="fa-brands fa-square-whatsapp"></i> Chat WhatsApp</a>
         </div>
-    </section>
+    </div>
+</section>
 
 <?= $this->endsection('content') ?>
