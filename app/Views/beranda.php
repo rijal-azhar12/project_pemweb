@@ -35,16 +35,16 @@
                     <img src="<?= base_url('assets/images/beranda/goacina.jpg') ?>" class="d-block w-100" alt="Pantai Goa Cina">
                 </div>
                 <div class="carousel-item">
-                    <img src="<?= base_url('assets/images/beranda/bali.jpeg') ?>" class="d-block w-100" alt="Bali">
+                    <img src="<?= base_url('assets/images/beranda/bali.png') ?>" class="d-block w-100" alt="Bali">
                 </div>
                 <div class="carousel-item">
-                    <img src="<?= base_url('assets/images/beranda/borobudur.jpeg') ?>" class="d-block w-100" alt="Borobudur">
+                    <img src="<?= base_url('assets/images/beranda/borobudur.png') ?>" class="d-block w-100" alt="Borobudur">
                 </div>
                 <div class="carousel-item">
-                    <img src="<?= base_url('assets/images/beranda/tumpaksewu.jpeg') ?>" class="d-block w-100" alt="Tumpak Sewu">
+                    <img src="<?= base_url('assets/images/beranda/tumpaksewu.jpg') ?>" class="d-block w-100" alt="Tumpak Sewu">
                 </div>
                 <div class="carousel-item">
-                    <img src="<?= base_url('assets/images/beranda/tebingbreksi.jpeg') ?>" class="d-block w-100" alt="Tebing Breksi">
+                    <img src="<?= base_url('assets/images/beranda/tebingbreksi.jpg') ?>" class="d-block w-100" alt="Tebing Breksi">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
